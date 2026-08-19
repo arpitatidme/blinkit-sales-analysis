@@ -16,21 +16,32 @@
 
 This is an end-to-end data analytics project based on Blinkit sales data.
 
-The project takes raw sales data through the complete analytics lifecycle:
+The project follows the complete analytics lifecycle:
 
 **Raw Data → Python → MySQL → SQL → Power BI → Business Insights**
 
 The objective is to understand sales performance across products, outlet types, outlet sizes, location tiers, and product characteristics.
 
-The project demonstrates practical skills in data cleaning, exploratory analysis, SQL querying, data visualization, dashboard development, and business analysis.
+This project demonstrates practical experience in:
+
+- Data cleaning
+- Exploratory data analysis
+- SQL querying
+- MySQL
+- Data visualization
+- KPI development
+- Power BI dashboard development
+- Business analysis
+- Data-driven recommendations
+- GitHub project documentation
 
 ---
 
-# 🎯 Business Problem
+## 🎯 Business Problem
 
 Retail businesses generate large amounts of transactional data, but raw data does not immediately explain what is driving sales performance.
 
-This project answers questions such as:
+This project investigates:
 
 - Which product categories generate the highest sales?
 - Which outlet types contribute the most revenue?
@@ -43,28 +54,27 @@ This project answers questions such as:
 
 ---
 
-# 🎯 Project Objectives
+## 🎯 Project Objectives
 
 The project was developed to:
 
-- Clean and prepare the raw dataset
-- Perform exploratory data analysis
-- Identify sales trends and patterns
-- Analyze sales performance using SQL
-- Apply advanced SQL techniques
-- Build an interactive Power BI dashboard
-- Create meaningful KPIs
-- Identify business insights
-- Develop data-driven recommendations
-- Present the complete project as a professional analytics portfolio
+1. Clean and prepare the raw sales dataset.
+2. Perform exploratory data analysis using Python.
+3. Analyze sales performance using MySQL and SQL.
+4. Apply advanced SQL techniques.
+5. Build an interactive Power BI dashboard.
+6. Create meaningful KPIs.
+7. Identify important business patterns.
+8. Develop data-driven recommendations.
+9. Present the complete project as a professional analytics portfolio.
 
 ---
 
 # 📊 Dataset
 
-The dataset contains **8,523 sales records**.
+The dataset contains **8,523 sales records** covering product and outlet information.
 
-### Main Dataset Information
+### Dataset Summary
 
 | Metric | Value |
 |---|---:|
@@ -75,7 +85,7 @@ The dataset contains **8,523 sales records**.
 | Number of Outlets | 10 |
 | Average Rating | 3.97 |
 
-### Main Variables
+### Main Dataset Variables
 
 | Category | Variables |
 |---|---|
@@ -91,7 +101,7 @@ The dataset contains **8,523 sales records**.
 
 # 🛠️ Tools & Technologies
 
-| Tool | Purpose |
+| Technology | Purpose |
 |---|---|
 | 🐍 Python | Data cleaning and exploratory analysis |
 | 🐼 Pandas | Data manipulation |
@@ -101,13 +111,13 @@ The dataset contains **8,523 sales records**.
 | 🐬 MySQL | Database storage and querying |
 | 💻 SQL | Business analysis |
 | 📊 Power BI | Interactive dashboard |
-| 🐙 GitHub | Documentation and portfolio presentation |
+| 🐙 GitHub | Documentation and portfolio |
 
 ---
 
 # 🔄 Complete Project Workflow
 
-```text
+~~~text
 RAW BLINKIT DATA
        │
        ▼
@@ -128,8 +138,8 @@ RAW BLINKIT DATA
        │
        ▼
 ┌──────────────────────┐
-│ MySQL                │
-│ Database Storage     │
+│ MySQL Database       │
+│ Data Storage         │
 └──────────────────────┘
        │
        ▼
@@ -144,10 +154,10 @@ RAW BLINKIT DATA
        │
        ▼
 ┌──────────────────────┐
-│ Power BI             │
-│ KPI Dashboard        │
-│ Interactive Filters  │
-│ Visual Analysis      │
+│ Power BI Dashboard   │
+│ KPIs                 │
+│ Charts               │
+│ Interactive Slicers  │
 └──────────────────────┘
        │
        ▼
@@ -155,46 +165,55 @@ RAW BLINKIT DATA
 │ Business Insights    │
 │ Recommendations      │
 └──────────────────────┘
+~~~
+
+---
+
 # 🐍 Python — Data Cleaning & Exploratory Data Analysis
 
-Python was used as the first stage of the project.
+Python was used as the first stage of the project to prepare and understand the dataset.
 
 ### Data Cleaning
 
 The following activities were performed:
 
--  Loaded and inspected the raw dataset 
--  Checked data types 
--  Identified missing values 
--  Standardized categorical values 
--  Handled missing item weights 
--  Handled missing outlet-size values 
--  Prepared the dataset for analysis 
+- Loaded and inspected the raw dataset
+- Checked data types
+- Identified missing values
+- Standardized categorical values
+- Handled missing item weights
+- Handled missing outlet-size values
+- Prepared the dataset for analysis
 
 ### Exploratory Data Analysis
 
 The analysis included:
 
--  Descriptive statistics 
--  Sales distribution analysis 
--  Product category analysis 
--  Outlet type analysis 
--  Outlet size analysis 
--  Location tier analysis 
--  Fat content analysis 
--  Correlation analysis 
--  Business-oriented visualizations 
+- Descriptive statistics
+- Sales distribution analysis
+- Product category analysis
+- Outlet type analysis
+- Outlet size analysis
+- Location tier analysis
+- Fat content analysis
+- Correlation analysis
+- Business-oriented visualizations
 
 ### Python Analysis Questions
 
--  Which products generate the highest sales? 
--  Which outlet types perform best? 
--  Which locations contribute the most sales? 
--  Is rating associated with sales? 
--  Is item visibility associated with sales?
-Python Project File
+- Which products generate the highest sales?
+- Which outlet types perform best?
+- Which locations contribute the most sales?
+- Is rating associated with sales?
+- Is item visibility associated with sales?
 
-📁 blinkit_analysis.ipynb
+### 📁 Python Project File
+
+[**blinkit_analysis.ipynb**](./blinkit_analysis.ipynb)
+
+The notebook contains the Python-based data cleaning and exploratory analysis.
+
+---
 
 # 🗄️ MySQL & SQL Analysis
 
@@ -230,7 +249,7 @@ The cleaned dataset was analyzed using MySQL to perform structured business anal
 
 ### Example SQL Query
 
-```sql
+~~~sql
 SELECT
     item_type,
     SUM(sales) AS total_sales,
@@ -238,9 +257,16 @@ SELECT
 FROM blinkit_sales
 GROUP BY item_type
 ORDER BY total_sales DESC;
-SQL Project File
+~~~
 
-📁 blinkit_analysis.sql
+### 📁 SQL Project File
+
+[**blinkit_analysis.sql**](./blinkit_analysis.sql)
+
+This file contains the SQL queries used for the business analysis.
+
+---
+
 # 📊 Power BI Dashboard
 
 The final analytical results were transformed into an interactive Power BI dashboard.
@@ -279,6 +305,8 @@ Compares sales across Tier 1, Tier 2, and Tier 3 locations.
 
 Compares Low Fat and Regular product performance.
 
+---
+
 ## 🎛️ Interactive Dashboard Filters
 
 The dashboard includes interactive slicers for:
@@ -291,9 +319,12 @@ The KPI cards and visualizations update dynamically when filters are applied.
 
 ### 📁 Power BI Project File
 
-**[Blinkit.pbix](blinkit.pbix)**
+[**blinkit.pbix**](./blinkit.pbix)
 
 This file contains the interactive Power BI dashboard.
+
+---
+
 # 🔎 Key Business Insights
 
 ### 🥦 Product Performance
@@ -319,6 +350,9 @@ Rating shows a very weak linear relationship with sales, suggesting that rating 
 ### 👁️ Visibility vs Sales
 
 Item visibility also shows a weak linear relationship with sales, suggesting that visibility alone does not explain overall sales performance.
+
+---
+
 # 💡 Business Recommendations
 
 ### 1. Focus on High-Performing Product Categories
@@ -340,14 +374,96 @@ Rating and visibility should not be treated as standalone predictors of sales be
 ### 5. Use Interactive Dashboard Analysis
 
 The Power BI dashboard allows users to combine filters and investigate specific product, outlet, and location segments.
+
 ---
 
 # 📸 Power BI Dashboard Preview
 
-
-![Blinkit Sales Dashboard](dashboard_preview.png)
-
+<img src="./dashboard_preview.png" alt="Blinkit Sales Dashboard" width="100%">
 
 The dashboard provides an interactive view of Blinkit sales performance across products, outlets, outlet sizes, and location tiers.
+
+---
+
+# 📂 Project Files
+
+| File | Description |
+|---|---|
+| [blinkit_analysis.ipynb](./blinkit_analysis.ipynb) | Python data cleaning, EDA and visualization |
+| [blinkit_analysis.sql](./blinkit_analysis.sql) | MySQL / SQL business analysis |
+| [blinkit.pbix](./blinkit.pbix) | Interactive Power BI dashboard |
+| [dashboard_preview.png](./dashboard_preview.png) | Power BI dashboard preview |
+
+---
+
+# 🧠 What I Learned
+
+This project strengthened my practical skills in:
+
+- Data cleaning and preprocessing
+- Exploratory data analysis
+- Python and Pandas
+- SQL and MySQL
+- CTEs
+- Window functions
+- Ranking
+- KPI development
+- Power BI dashboard development
+- Interactive data visualization
+- Business insight generation
+- Data-driven recommendations
+- GitHub documentation
+- Presenting technical analysis as a business story
+
+---
+
+# 🚀 Future Improvements
+
+Possible extensions include:
+
+- 📈 Sales forecasting
+- 📅 Time-series analysis
+- 👥 Customer segmentation
+- 💰 Profit and margin analysis
+- 🏪 Outlet performance forecasting
+- 🤖 Predictive modeling
+- 📍 Geographic analysis
+- 📦 Product recommendation analysis
+- 🔄 Automated Power BI refresh
+- 📊 Power BI drill-through pages
+
+---
+
+# 📁 Repository Structure
+
+~~~text
+blinkit-sales-analysis/
+│
+├── README.md
+├── blinkit_analysis.ipynb
+├── blinkit_analysis.sql
+├── blinkit.pbix
+└── dashboard_preview.png
+~~~
+
+---
+
+# 👩‍💻 Author
+
+## Arpita Tidme
+
+**Aspiring Data Analyst**
+
+### Skills Demonstrated
+
+`Python` • `SQL` • `MySQL` • `Power BI` • `Pandas` • `NumPy` • `Data Analysis` • `Data Visualization`
+
+---
+
+# ⭐ Project
+
+If you found this project useful, feel free to explore the analysis files and Power BI dashboard.
+
+**Built as an end-to-end data analytics portfolio project.**
 
 
